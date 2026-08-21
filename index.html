@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Coin Reward</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="coin-icon">🪙</div>
+
+      <h1>Coin Reward</h1>
+
+      <p class="subtitle">
+        Enter your nickname to check your reward.
+      </p>
+
+      <input
+        type="text"
+        id="nickname"
+        placeholder="Your nickname"
+        maxlength="30"
+      >
+
+      <button onclick="startPrank()">
+        Check Reward
+      </button>
+
+      <div id="loading" class="hidden">
+        <div class="spinner"></div>
+        <p>Checking reward...</p>
+      </div>
+
+      <div id="result" class="hidden">
+
+        <p class="hello" id="hello"></p>
+
+        <div class="coins">
+          <span>🪙</span>
+          <strong>9,999</strong>
+        </div>
+
+        <p class="success">
+          Coins added successfully!
+        </p>
+
+      </div>
+
+      <div id="prank" class="hidden">
+
+        <div class="prank-icon">😂</div>
+
+        <h2>GOT YOU!</h2>
+
+        <p>
+          This was just a prank!
+        </p>
+
+        <p class="small">
+          No real coins were added to any account.
+        </p>
+
+        <button onclick="resetPrank()">
+          Try Again
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
